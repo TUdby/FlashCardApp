@@ -84,8 +84,22 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, AddCardActivity.class);
-                MainActivity.this.startActivity(intent);
+                MainActivity.this.startActivityForResult(intent, 100);
             }
         });
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == 100 && resultCode == RESULT_OK) {
+            String question = data.getExtras().getString("question");
+            ((TextView) findViewById(R.id.question)).setText(question);
+            String answer = data.getExtras().getString("answer");
+            ((TextView) findViewById(R.id.answer)).setText(answer);
+            ((TextView) findViewById(R.id.option1)).setVisibility(View.INVISIBLE);
+            ((TextView) findViewById(R.id.option2)).setVisibility(View.INVISIBLE);
+            ((TextView) findViewById(R.id.option3)).setVisibility(View.INVISIBLE);
+            ((ImageView) findViewById(R.id.toggle_choices_visibility)).setVisibility(View.INVISIBLE);
+        }
     }
 }
