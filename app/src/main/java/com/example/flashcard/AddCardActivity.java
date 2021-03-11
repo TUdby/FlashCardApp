@@ -14,6 +14,11 @@ public class AddCardActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_card);
 
+        if(getIntent().hasExtra("question")) {
+            ((EditText) findViewById(R.id.question_field)).setText(getIntent().getExtras().getString("question"));
+            ((EditText) findViewById(R.id.answer_field)).setText(getIntent().getExtras().getString("answer"));
+        }
+
         findViewById(R.id.save).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -86,4 +86,13 @@
         android:layout_margin="20dp"
         android:src="@drawable/plus_circle"/>
 
+    <ImageView
+        android:id="@+id/edit_button"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="20dp"
+        android:src="@drawable/edit" />
+
 </RelativeLayout>

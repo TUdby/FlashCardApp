@@ -87,6 +87,18 @@ public class MainActivity extends AppCompatActivity {
                 MainActivity.this.startActivityForResult(intent, 100);
             }
         });
+
+        findViewById(R.id.edit_button).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, AddCardActivity.class);
+                String question = ((TextView) findViewById(R.id.question)).getText().toString();
+                String answer = ((TextView) findViewById(R.id.answer)).getText().toString();
+                intent.putExtra("question", question);
+                intent.putExtra("answer", answer);
+                MainActivity.this.startActivityForResult(intent, 100);
+            }
+        });
     }
 
     @Override
