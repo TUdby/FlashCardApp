@@ -5,10 +5,9 @@
 ### App Description
 Can open new activity to create cards with multiple choice options.
 
-### App Walk-though
-`TODO://` Add the URL to your animated app walk-though `gif` in the image tag below. Make sure the gif actually renders and animates when viewing this README. (☝️ Remove this paragraph after after adding gif)
+### App Walk-through
 
-<img src="YOUR_GIF_URL_HERE" width=200><br>
+<img src="lab2App.gif" width=200><br>
 
 ## Required
 - [x] User can click on a ‘+’ button that takes the user to new ‘Add Card Screen’
@@ -29,7 +28,7 @@ Can open new activity to create cards with multiple choice options.
 ### App Description
 Show flash card that can toggle to answer. Have answer options that can be selected. Options turn green when selected if corrects, otherwise red. Visibility toggle at bottom for options.
 
-### App Walk-though
+### App Walk-through
 
 <img src="lab1App.gif" width=200><br>
 
