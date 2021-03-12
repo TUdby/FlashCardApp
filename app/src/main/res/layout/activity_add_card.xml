@@ -27,6 +27,7 @@
         android:layout_height="70dp"
         android:layout_margin="20dp"
         android:hint="Enter Wrong Answer"
+        android:maxLength="20"
         android:id="@+id/option1_field"
         android:layout_below="@+id/answer_field"/>
 
@@ -35,6 +36,7 @@
         android:layout_height="70dp"
         android:layout_margin="20dp"
         android:hint="Enter Wrong Answer"
+        android:maxLength="20"
         android:id="@+id/option2_field"
         android:layout_below="@+id/option1_field"/>
 
@@ -43,6 +45,8 @@
         android:layout_height="70dp"
         android:layout_margin="20dp"
         android:hint="Enter Correct Answer"
+        android:textColorHighlight="#7cff88"
+        android:maxLength="20"
         android:id="@+id/option3_field"
         android:layout_below="@+id/option2_field"/>
 
