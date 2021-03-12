@@ -94,10 +94,19 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, AddCardActivity.class);
+
                 String question = ((TextView) findViewById(R.id.question)).getText().toString();
                 String answer = ((TextView) findViewById(R.id.answer)).getText().toString();
+                String option1 = ((TextView) findViewById(R.id.option1)).getText().toString();
+                String option2 = ((TextView) findViewById(R.id.option2)).getText().toString();
+                String option3 = ((TextView) findViewById(R.id.option3)).getText().toString();
+
                 intent.putExtra("question", question);
                 intent.putExtra("answer", answer);
+                intent.putExtra("option1", option1);
+                intent.putExtra("option2", option2);
+                intent.putExtra("option3", option3);
+
                 MainActivity.this.startActivityForResult(intent, 100);
             }
         });
@@ -108,12 +117,19 @@ public class MainActivity extends AppCompatActivity {
         if (requestCode == 100 && resultCode == RESULT_OK) {
             String question = data.getExtras().getString("question");
             ((TextView) findViewById(R.id.question)).setText(question);
+
             String answer = data.getExtras().getString("answer");
             ((TextView) findViewById(R.id.answer)).setText(answer);
-            ((TextView) findViewById(R.id.option1)).setVisibility(View.INVISIBLE);
-            ((TextView) findViewById(R.id.option2)).setVisibility(View.INVISIBLE);
-            ((TextView) findViewById(R.id.option3)).setVisibility(View.INVISIBLE);
-            ((ImageView) findViewById(R.id.toggle_choices_visibility)).setVisibility(View.INVISIBLE);
+
+            String option1 = data.getExtras().getString("option1");
+            ((TextView) findViewById(R.id.option1)).setText(option1);
+
+            String option2 = data.getExtras().getString("option2");
+            ((TextView) findViewById(R.id.option2)).setText(option2);
+
+            String option3 = data.getExtras().getString("option3");
+            ((TextView) findViewById(R.id.option3)).setText(option3);
+
             Snackbar.make(findViewById(R.id.question),
                     "Card Created Successfully!",
                     Snackbar.LENGTH_SHORT)
