@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.android.material.snackbar.Snackbar;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -112,6 +114,10 @@ public class MainActivity extends AppCompatActivity {
             ((TextView) findViewById(R.id.option2)).setVisibility(View.INVISIBLE);
             ((TextView) findViewById(R.id.option3)).setVisibility(View.INVISIBLE);
             ((ImageView) findViewById(R.id.toggle_choices_visibility)).setVisibility(View.INVISIBLE);
+            Snackbar.make(findViewById(R.id.question),
+                    "Card Created Successfully!",
+                    Snackbar.LENGTH_SHORT)
+                    .show();
         }
     }
 }
