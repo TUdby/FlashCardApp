@@ -29,6 +29,7 @@
         android:text="Barack Obama"
         android:textSize="40sp"/>
 
+    <!--
     <TextView
         android:id="@+id/option1"
         android:layout_below="@id/answer"
@@ -76,6 +77,24 @@
         android:layout_marginBottom="20dp"
         android:id="@+id/toggle_choices_visibility"
         android:src="@drawable/ic_iconmonstr_eye_8" />
+-->
+    <ImageView
+        android:id="@+id/trash_button"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="20dp"
+        android:src="@drawable/trash"/>
+
+    <ImageView
+        android:id="@+id/next_button"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="20dp"
+        android:src="@drawable/next"/>
 
     <ImageView
         android:id="@+id/add_button"
